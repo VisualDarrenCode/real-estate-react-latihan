@@ -1,15 +1,14 @@
-import {Routes, route, NavLink}from 'react-router-dom'
-import 
-
-
-import React from 'react'
+import { NavLink, Route, Routes } from 'react-router-dom'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Profile from './pages/Profile'
+import Register from './pages/Register'
 
 function App() {
   return (
     <>
-      (/* Navbar */)
-      <nav className="navbar  navbar-expand-lg navbar-light bg-light"></nav>
-       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">Griya MDP</NavLink>
           <button
@@ -70,18 +69,15 @@ function App() {
           </div>
         </div>
       </nav>
-      (/* router Outlet */)
       <div>
         <Routes>
-            <Route path='/' elements={<Home/>}/>
-             <Route path='/profile' elements={<Profile/>}/>
-              <Route path='/login' elements={<Login/>}/>
-               <Route path='/register' elements={<Register/>}/>
-                <Route path='/contact' elements={<Contact/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-        </div>
-         
-    
+      </div>
     </>
   )
 }
